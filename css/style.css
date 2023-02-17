@@ -19,7 +19,7 @@ body {
 
 h1 {
     color: #AD7BE9;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .clock {
@@ -30,7 +30,8 @@ h1 {
     justify-content: center;
     background-image: url(../img/clock.png);
     background-size: cover;
-    border: 10px solid #393053;
+    border: 3px solid #B3005E;
+    box-shadow: 0 0 35px #B3005E;
     border-radius: 50%;
 }
 
@@ -52,24 +53,48 @@ h1 {
 
 .clock .hours .hour-hand {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 160px;
     height: 160px;
 }
 
-.clock .hours .minute-hand {
+.clock .minutes .minute-hand {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 190px;
     height: 190px;
 }
 
-.clock .hours .second-hand {
+.clock .seconds .second-hand {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 230px;
     height: 230px;
+}
+
+.clock .hours .hour-hand::before {
+    content: '';
+    width: 8px;
+    height: 80px;
+    background-color: #F99417;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.clock .minutes .minute-hand::before {
+    content: '';
+    width: 4px;
+    height: 100px;
+    background-color: #fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.clock .seconds .second-hand::before {
+    content: '';
+    width: 2px;
+    height: 150px;
+    background-color: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
 }
