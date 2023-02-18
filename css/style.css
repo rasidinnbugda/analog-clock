@@ -7,18 +7,28 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #18122B;
-    background-repeat: no-repeat;
     font-family: 'Inter', sans-serif;
 }
 
+.page-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/background.jpg);
+    background-position: center;
+}
+
+.page-wrapper .container {
+    background-color: #fff;
+    padding: 30px;
+    border: 3px solid #2f2e2e;
+    border-radius: 10px;
+}
+
 h1 {
-    color: #AD7BE9;
+    color: #2f2e2e;
     padding-bottom: 30px;
 }
 
@@ -30,8 +40,8 @@ h1 {
     justify-content: center;
     background-image: url(../img/clock.png);
     background-size: cover;
-    border: 3px solid #B3005E;
-    box-shadow: 0 0 35px #B3005E;
+    border: 3px solid #2f2e2e;
+    box-shadow: 0 0 15px #2f2e2e;
     border-radius: 50%;
 }
 
@@ -76,7 +86,7 @@ h1 {
     content: '';
     width: 8px;
     height: 80px;
-    background-color: #F99417;
+    background-color: #bf321a;
     z-index: 10;
     border-radius: 6px 6px 0 0;
 }
@@ -85,7 +95,7 @@ h1 {
     content: '';
     width: 4px;
     height: 100px;
-    background-color: #fff;
+    background-color: #000;
     z-index: 11;
     border-radius: 6px 6px 0 0;
 }
@@ -94,7 +104,7 @@ h1 {
     content: '';
     width: 2px;
     height: 150px;
-    background-color: #fff;
+    background-color: #000;
     z-index: 12;
     border-radius: 6px 6px 0 0;
 }
