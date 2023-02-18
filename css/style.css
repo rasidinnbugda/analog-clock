@@ -22,7 +22,7 @@ body {
 
 .page-wrapper .container {
     background-color: #fff;
-    padding: 30px;
+    padding: 30px 30px 0px 30px;
     border: 3px solid #2f2e2e;
     border-radius: 10px;
 }
@@ -84,9 +84,10 @@ h1 {
 
 .clock .hours .hour-hand::before {
     content: '';
-    width: 8px;
-    height: 80px;
+    width: 6px;
+    height: 85px;
     background-color: #bf321a;
+    box-shadow: 0 0 10px #bf321a;
     z-index: 10;
     border-radius: 6px 6px 0 0;
 }
@@ -107,4 +108,61 @@ h1 {
     background-color: #000;
     z-index: 12;
     border-radius: 6px 6px 0 0;
+}
+
+@media (max-width: 991px) {
+    .clock {
+        width: 250px;
+        height: 250px;
+    }
+
+    .clock .hours .hour-hand {
+        display: flex;
+        justify-content: center;
+        width: 130px;
+        height: 130px;
+    }
+    
+    .clock .minutes .minute-hand {
+        display: flex;
+        justify-content: center;
+        width: 160px;
+        height: 160px;
+    }
+    
+    .clock .seconds .second-hand {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+    }
+    
+
+    .clock .hours .hour-hand::before {
+        content: '';
+        width: 6px;
+        height: 65px;
+        background-color: #bf321a;
+        box-shadow: 0 0 10px #bf321a;
+        z-index: 10;
+        border-radius: 6px 6px 0 0;
+    }
+    
+    .clock .minutes .minute-hand::before {
+        content: '';
+        width: 4px;
+        height: 80px;
+        background-color: #000;
+        z-index: 11;
+        border-radius: 6px 6px 0 0;
+    }
+    
+    .clock .seconds .second-hand::before {
+        content: '';
+        width: 2px;
+        height: 120px;
+        background-color: #000;
+        z-index: 12;
+        border-radius: 6px 6px 0 0;
+    }
 }
